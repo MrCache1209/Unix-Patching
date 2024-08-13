@@ -4,10 +4,9 @@
 mkdir -p /root/admin
 
 # Clone the Git repository into the /root/admin directory
-cp Unix-Patching/*.sh /root/admin
+cp *.sh /root/admin
 
 # Change the permissions of the update.sh file
-mv /root/admin/Unix-Patching/update.sh ..
 chmod 755 /root/admin/update.sh
 
 # Create the log directory
