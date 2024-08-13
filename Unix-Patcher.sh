@@ -4,7 +4,7 @@
 mkdir -p /root/admin
 
 # Clone the Git repository into the /root/admin directory
-git clone https://github.com/MrCache1209/Unix-Patching.git /root/admin
+cp Unix-Patching/*.sh /root/admin
 
 # Change the permissions of the update.sh file
 mv /root/admin/Unix-Patching/update.sh ..
@@ -17,3 +17,6 @@ mkdir /root/admin/log
 CRON_ENTRY="00 00 */8,*/9,*/10,*/11,*/12,*/13,*/14 * 4 /root/admin/update.sh 2>&1 >> /root/admin/log/update.log"
 # Check if the entry already exists to avoid duplication
 crontab -l | grep -F "$CRON_ENTRY" || (crontab -l; echo "$CRON_ENTRY") | crontab -
+
+# CleanUp Unix-Patching
+rm -rf Unix-Patching/
