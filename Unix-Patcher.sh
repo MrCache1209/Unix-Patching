@@ -4,7 +4,7 @@
 mkdir -p /root/admin
 
 # Clone the Git repository into the /root/admin directory
-cp update.sh /root/admin
+cp update.sh /root/admin/
 
 # Change the permissions of the update.sh file
 chmod 755 /root/admin/update.sh
